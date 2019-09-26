@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Table(name="EMPLEADO")
 @Entity

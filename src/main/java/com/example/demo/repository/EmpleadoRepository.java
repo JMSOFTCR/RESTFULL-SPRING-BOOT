@@ -15,4 +15,6 @@ public interface EmpleadoRepository extends JpaRepository<Empleado, Serializable
 	public abstract List<Empleado> findByCargo(String cargo);
 	
 	public abstract Empleado findByNombreAndCargo(String nombre, String cargo);
+	
+	public abstract Empleado findByNombreAndId(String name, long id);
 }
