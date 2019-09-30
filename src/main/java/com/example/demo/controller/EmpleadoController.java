@@ -1,11 +1,13 @@
 package com.example.demo.controller;
 
+
 import java.util.List;
 
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -42,8 +44,8 @@ public class EmpleadoController {
 		return service.delete(nombre, id);
 	}
 	
-	@GetMapping("/empleado")
-	public List<MEmpleado> GetEmpleado(){
-		return service.Obtener();
+	@GetMapping(value="/empleado")
+	public List<MEmpleado> GetEmpleado(Pageable pageable){
+		return service.obtenerPorPaginacion(pageable);
 	}
 }
