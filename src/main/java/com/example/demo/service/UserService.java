@@ -36,6 +36,6 @@ public class UserService implements UserDetailsService {
 			auths.add(new SimpleGrantedAuthority(roles[i]));
 		}
 		
-		return null;
+		return auths;
 	}
 }
