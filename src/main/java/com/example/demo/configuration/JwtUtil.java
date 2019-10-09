@@ -15,7 +15,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 
 public class JwtUtil {
 
-    // MÃ©todo para crear el JWT y enviarlo al cliente en el header de la respuesta
+    // Metodo para crear el JWT y enviarlo al cliente en el header de la respuesta
     static void addAuthentication(HttpServletResponse res, String username) {
 
         String token = Jwts.builder()
@@ -29,7 +29,7 @@ public class JwtUtil {
         res.addHeader("Authorization", "Bearer " + token);
     }
 
-    // MÃ©todo para validar el token enviado por el cliente
+    // Metodo para validar el token enviado por el cliente
     static Authentication getAuthentication(HttpServletRequest request) {
 
         // Obtenemos el token que viene en el encabezado de la peticion
